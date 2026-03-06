@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IBT Communication</title>
+<style>
+*{margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif;}
+body{background:#0f2027; color:white;}
+
+/* Header */
+.header{
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  padding:30px 20px;
+  text-align:center;
+}
+.header .logo{
+  width:120px;
+  border-radius:50%;
+  animation: zoomIn 1.5s ease;
+}
+.header h1{margin-top:10px; font-size:32px; animation: fadeIn 2s ease;}
+.header p{color:#ddd; margin-top:5px;}
+
+/* Navigation */
+.nav{
+  display:flex;
+  justify-content:center;
+  background:#0072ff;
+}
+.nav a{
+  color:white;
+  text-decoration:none;
+  padding:15px 20px;
+  font-weight:bold;
+  transition:0.3s;
+}
+.nav a:hover{background:#005bb5;}
+
+/* Hero section */
+.hero{
+  text-align:center;
+  padding:50px 20px;
+}
+.hero h2{font-size:28px; margin-bottom:15px;}
+.hero p{color:#ccc; font-size:18px; margin-bottom:20px;}
+.hero .button{
+  padding:12px 25px;
+  background:#00c6ff;
+  color:white;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:bold;
+  transition:0.3s;
+}
+.hero .button:hover{background:#0072ff;}
+
+/* Services */
+.services{
+  padding:50px 20px;
+  background:linear-gradient(to right, #203a43, #2c5364);
+  text-align:center;
+}
+.services h2{font-size:28px; margin-bottom:30px;}
+.services .cards{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+}
+.services .card{
+  background:rgba(255,255,255,0.1);
+  padding:20px;
+  border-radius:15px;
+  width:200px;
+  transition:0.3s;
+}
+.services .card:hover{background:rgba(0,198,255,0.2);}
+.services .card h3{margin-bottom:10px;}
+.services .card p{font-size:14px; color:#ddd;}
+
+/* Footer */
+.footer{
+  text-align:center;
+  padding:20px;
+  background:rgba(0,0,0,0.3);
+  margin-top:20px;
+}
+
+/* Animations */
+@keyframes fadeIn{from{opacity:0;} to{opacity:1;}}
+@keyframes zoomIn{from{transform:scale(0.5);} to{transform:scale(1);}}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <img src="logo.png" class="logo" alt="IBT Logo">
+  <h1>IBT COMMUNICATION</h1>
+  <p id="typing"></p>
+</div>
+
+<!-- Navigation -->
+<div class="nav">
+  <a href="#hero">Home</a>
+  <a href="#services">Services</a>
+  <a href="tel:+2347061661811">Call</a>
+  <a href="https://wa.me/2347061661811" target="_blank">WhatsApp</a>
+</div>
+
+<!-- Hero Section -->
+<div class="hero" id="hero">
+  <h2>Your One-Stop Mobile Solutions</h2>
+  <p>We repair, flash, unlock, and replace screens for all phones.</p>
+  <a href="tel:+2347061661811" class="button">Call Us Now</a>
+</div>
+
+<!-- Services Section -->
+<div class="services" id="services">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card"><h3>Phone Repair</h3><p>Screen repair, battery replacement, charging issues.</p></div>
+    <div class="card"><h3>Software Flash</h3><p>Install firmware, update software, fix boot issues.</p></div>
+    <div class="card"><h3>Phone Unlocking</h3><p>Network unlock for all brands and models.</p></div>
+    <div class="card"><h3>Other Services</h3><p>Accessories, troubleshooting, and technical support.</p></div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  © 2026 IBT Communication. All Rights Reserved.
+</div>
+
+<!-- Typing Effect Script -->
+<script>
+var text = "Group One | Group Many Solutions";
+var i = 0;
+var speed = 80;
+function typeWriter() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+window.onload = typeWriter;
+</script>
+
+</body>
+</html>
